@@ -8,11 +8,19 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 {
     public class FORMAS_DE_PAGO
     {
+        public FORMAS_DE_PAGO()
+        {
+            _DETALLES_DE_PAGO = new HashSet<DETALLES_DE_PAGO>();
+        }
+
         [Key]
         public int ID_FORMAS_PAGO { get; set; }
 
         public string NOMBRE { get; set; }
 
         public string DESCRIPCION { get; set; }
+
+        ICollection<DETALLES_DE_PAGO> _DETALLES_DE_PAGO { get; set; }
+
     }
 }

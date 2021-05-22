@@ -9,6 +9,12 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 {
     public class FACTURAS
     {
+        public FACTURAS() {
+            _DETALLES_FACTURA = new HashSet<DETALLES_FACTURA>();
+            _NOTAS_DE_CREDITO = new HashSet<NOTAS_DE_CREDITO>();
+            _VENTAS = new HashSet<VENTAS>();
+        }
+        
         [Key]
         public int ID_FACTURAS { get; set; }
 
@@ -33,5 +39,10 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         public int SALDO { get; set; }
 
         public DateTime fecha { get; set; }
+
+        ICollection<DETALLES_FACTURA> _DETALLES_FACTURA { get; set; }
+        ICollection<NOTAS_DE_CREDITO> _NOTAS_DE_CREDITO { get; set; }
+        ICollection<VENTAS> _VENTAS { get; set; }
+
     }
 }

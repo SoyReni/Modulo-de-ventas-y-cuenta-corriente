@@ -9,15 +9,17 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 {
     public class DETALLE_CREDITO
     {
+        public DETALLE_CREDITO()
+        {
+            _FACTURAS = new HashSet<FACTURAS>();
+        }
         [Key]
         public int ID_DETALLE_CREDITO { get; set; }
-
-        [ForeignKey ("ID_CREDITO")]
-        public int ID_CREDITO { get; set; }
 
         public int MONTO_CUOTA { get; set; }
 
         public char PAGADO { get; set; }
+        ICollection<FACTURAS> _FACTURAS { get; set; }
 
     }
 }

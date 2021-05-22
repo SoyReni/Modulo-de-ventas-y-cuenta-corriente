@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T1KTh8GI7F5KFTKEPwIsXPUC1aKD33+ePxMUlX0n3TMW/44PW+FxFFTFsk9RqyxVqq3QLuF4soCCQgiqSW1+qA==",
+  "dgSpecHash": "3QHvLvO7MlO/9b8uCiKXmM/r1kl010ncV3uXskXQw8Q7HmY/AwHpCx+gvzjyTtmTAYXODSPLMfUBAWYVjqI+qA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Reni\\source\\repos\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
+  "projectFilePath": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Reni\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Reni\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\3.0.0\\microsoft.aspnetcore.connections.abstractions.3.0.0.nupkg.sha512",

@@ -8,6 +8,12 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 {
     public class PRODUCTO
     {
+        public PRODUCTO()
+        {
+            _STOCK = new HashSet<STOCK>();
+            _VENTAS_DETALLES = new HashSet<VENTAS_DETALLES>();
+        }
+
         [Key]
         public int ID_PRODUCTO { get; set; }
 
@@ -18,5 +24,8 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         public string DESCRIPCION { get; set; }
 
         public int PRECIO { get; set; }
+
+        ICollection<STOCK> _STOCK { get; set; }
+        ICollection<VENTAS_DETALLES> _VENTAS_DETALLES{ get; set; }
     }
 }

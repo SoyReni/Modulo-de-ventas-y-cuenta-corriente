@@ -8,6 +8,12 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 {
     public class CLIENTE
     {
+        public CLIENTE() {
+            _FACTURAS = new HashSet<FACTURAS>();
+            _PAGOS = new HashSet<PAGOS>();
+            _VENTAS = new HashSet<VENTAS>();
+        }
+
         [Key]
         public int ID_CLIENTE { get; set; }
 
@@ -20,6 +26,9 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         public string CORREO { get; set; }
 
         public int CREDITO { get; set; }
+        ICollection<FACTURAS> _FACTURAS { get; set; }
 
+        ICollection<PAGOS> _PAGOS { get; set; }
+        ICollection<VENTAS> _VENTAS { get; set; }
     }
 }

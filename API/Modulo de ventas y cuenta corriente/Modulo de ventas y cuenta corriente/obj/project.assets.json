@@ -9240,11 +9240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Reni\\source\\repos\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
+      "projectUniqueName": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
       "projectName": "Modulo de ventas y cuenta corriente",
-      "projectPath": "C:\\Users\\Reni\\source\\repos\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
+      "projectPath": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
       "packagesPath": "C:\\Users\\Reni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Reni\\source\\repos\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\obj\\",
+      "outputPath": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Reni\\AppData\\Roaming\\NuGet\\NuGet.Config",
