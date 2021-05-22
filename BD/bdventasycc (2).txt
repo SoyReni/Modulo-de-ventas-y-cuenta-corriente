@@ -1,0 +1,343 @@
+
+create database BD_VENTAS_Y_CC
+
+
+/*==============================================================*/
+/* Table: PRODUCTO                                              */
+/*==============================================================*/
+create table PRODUCTO (
+   ID_PRODUCTO          int                  not null,
+   CODIGO               char(25)                  not null,
+   NOMBRE               char(25)             not null,
+   DESCRIPCION          char(100)            null,
+   PRECIO               decimal(25,5)                  not null,
+   constraint PK_PRODUCTO primary key (ID_PRODUCTO)
+)
+
+
+/*==============================================================*/
+/* Table: BANCOS                                                */
+/*==============================================================*/
+create table BANCOS (
+   ID_BANCO             int                  not null,
+   NOMBRE               char(25)             not null,
+   constraint PK_BANCOS primary key (ID_BANCO)
+)
+go
+/*==============================================================*/
+/* Table: TARJETA                                               */
+/*==============================================================*/
+create table TARJETA (
+   ID_TARJETA           int                  not null,
+   MARCA                char(25)             not null,
+   TIPO                 char(25)             not null,
+   constraint PK_TARJETA primary key (ID_TARJETA)
+)
+go
+
+
+/*==============================================================*/
+/* Table: FORMAS_DE_PAGO                                        */
+/*==============================================================*/
+create table FORMAS_DE_PAGO (
+   ID_FORMAS_PAGO       int                  not null,
+   NOMBRE               char(25)             not null,
+   DESCRIPCION          char(25)             null,
+   constraint PK_FORMAS_DE_PAGO primary key (ID_FORMAS_PAGO)
+)
+go
+
+/*==============================================================*/
+/* Table: ENCARGADOS                                            */
+/*==============================================================*/
+create table ENCARGADOS (
+   ID_ENCARGADOS        int                  not null,
+   USUARIO              char(25)             not null,
+   CONTRASENA           char(25)             not null,
+   NOMBRE               char(25)             null,
+   APELLIDO_            char(25)             null,
+   CI                   char(25)                    null,
+   TELEFONO             char(25)                  null,
+   CORREO               char(25)             null,
+   DIRECCION            char(25)             null,
+   constraint PK_ENCARGADOS primary key (ID_ENCARGADOS)
+)
+go
+
+
+
+/*==============================================================*/
+/* Table: DETALLE_CREDITO                                       */
+/*==============================================================*/
+create table DETALLE_CREDITO (
+   ID_DETALLE_CREDITO   int                  not null,
+   MONTO_CUOTA          int                  not null,
+   NRO_CUOTA            int                  not null,
+   PAGADO               bit             not null,
+   constraint PK_DETALLE_CREDITO primary key (ID_DETALLE_CREDITO)
+)
+go
+/*==============================================================*/
+/* Table: CLIENTE                                               */
+/*==============================================================*/
+create table CLIENTE (
+   ID_CLIENTE           int                  not null,
+   RUC                   char(25)                   not null,
+   NOMBRE_              char(25)             not null,
+   APELLIDO             char(25)             null,
+   TELEFONO              char(25)                   null,
+   CORREO               char(40)             null,
+   CREDITO              decimal(25,5)                  not null,
+   constraint PK_CLIENTE primary key (ID_CLIENTE)
+)
+go
+
+/*==============================================================*/
+/* Table: VENTAS_DETALLES                                       */
+/*==============================================================*/
+create table VENTAS_DETALLES (
+   ID_VENTAS_DETALLES   int                  not null,
+   ID_PRODUCTO          int                  not null,
+   ID_VENTA             int                  null,
+   CANTIDAD             int                  not null,
+   PRECIO_UNITARIO      decimal(25,5)                      not null,
+   SUBTOTAL             decimal(25,5)                      not null,
+   constraint PK_VENTAS_DETALLES primary key (ID_VENTAS_DETALLES)
+)
+go
+
+
+
+/*==============================================================*/
+/* Table: PAGOS                                                 */
+/*==============================================================*/
+create table PAGOS (
+   ID_PAGO              int                  not null,
+   ID_CLIENTE           int                  null,
+   ID_VENTA             int                  null,
+   TOTAL                decimal(25,5)        not null,
+   FECHA                datetime             null,
+   constraint PK_PAGOS primary key (ID_PAGO)
+)
+go
+/*==============================================================*/
+/* Table: STOCK                                                 */
+/*==============================================================*/
+create table STOCK (
+   ID_STOCK             int                  not null,
+   ID_PRODUCTO          int                  not null,
+   CANTIDAD             int                  not null,
+   DEPOSITO             int                  not null,
+   constraint PK_STOCK primary key (ID_STOCK)
+)
+go
+
+
+
+
+/*==============================================================*/
+/* Table: VENTAS                                                */
+/*==============================================================*/
+create table VENTAS (
+   ID_VENTA             int                  not null,
+   ID_ENCARGADOS        int                  null,
+   FECHA                datetime             not null,
+   ID_CLIENTE           int                  not null,
+   ID_FACTURAS          int                  null,
+   ESTADO               char(25)             null,
+   TOTAL                decimal(25,5)                      null,
+   IVA                  decimal(25,5)              null,
+   constraint PK_VENTAS primary key (ID_VENTA)
+)
+go
+
+
+/*==============================================================*/
+/* Table: DETALLES_FACTURA                                      */
+/*==============================================================*/
+create table DETALLES_FACTURA (
+   ID_DETALLE_FACTURA   int                  not null,
+   ID_VENTA             int                  null,
+   ID_FACTURAS          int                  null,
+   IVA                  decimal(25,5)                      null,
+   ESTADO               varchar(25)          not null,
+   CANT_CUOTAS          int                  not null,
+   constraint PK_DETALLES_FACTURA primary key (ID_DETALLE_FACTURA)
+)
+go
+
+
+/*==============================================================*/
+/* Table: FACTURAS                                              */
+/*==============================================================*/
+create table FACTURAS (
+   ID_FACTURAS          int                  not null,
+   ID_CLIENTE           int                  null,
+   ID_VENTA             int                  null,
+   ID_ENCARGADOS        int                  null,
+   ID_DETALLE_CREDITO   int                  null,
+   ESTADO               char(25)             not null,
+   TOTAL_               decimal(25,5)                      null,
+   IVA                  decimal(25,5)                      not null,
+   SALDO                decimal(25,5)                      null,
+   FECHA                date                 null,
+   constraint PK_FACTURAS primary key (ID_FACTURAS)
+)
+go
+/*==============================================================*/
+/* Table: DETALLES_DE_PAGO                                      */
+/*==============================================================*/
+create table DETALLES_DE_PAGO (
+   ID_DETALLES_PAGOS    int                  not null,
+   ID_PAGO              int                  null,
+   ID_FORMAS_PAGO       int                  null,
+   ID_TARJETA           int                  null,
+   ID_BANCO             int                  null,
+   MONTO                decimal(25,5)        not null,
+   VUELTO               decimal(25,5)        null,
+   NUMERO               char(25)                  not null,
+   constraint PK_DETALLES_DE_PAGO primary key (ID_DETALLES_PAGOS)
+)
+go
+
+/*==============================================================*/
+/* Table: NOTAS_DE_CREDITO                                      */
+/*==============================================================*/
+create table NOTAS_DE_CREDITO (
+   ID_NOTA_CREDITO      int                  not null,
+   ID_FACTURAS          int                  null,
+   ID_ENCARGADOS        int                  null,
+   FECHA_EMICIO         datetime             not null,
+   CONCEPTO             char(25)             null,
+   RAZON                char(25)             null,
+   MONTO                decimal(25,5)                      not null,
+   IVA                  decimal(25,5)                      not null,
+   constraint PK_NOTAS_DE_CREDITO primary key (ID_NOTA_CREDITO)
+)
+go
+go
+
+alter table VENTAS_DETALLES
+   add constraint FK_VENTAS_D_REFERENCE_VENTAS foreign key (ID_VENTA)
+      references VENTAS (ID_VENTA)
+go
+
+alter table VENTAS_DETALLES
+   add constraint FK_VENTAS_D_REFERENCE_PRODUCTO foreign key (ID_PRODUCTO)
+      references PRODUCTO (ID_PRODUCTO)
+go
+
+alter table VENTAS_DETALLES
+   add constraint FK_VENTAS_D_REFERENCE_ENCARGADOS foreign key (ID_VENTA)
+      references VENTAS (ID_VENTA)
+go
+
+
+alter table PAGOS
+   add constraint FK_PAGOS_REFERENCE_CLIENTE foreign key (ID_CLIENTE)
+      references CLIENTE (ID_CLIENTE)
+go
+
+alter table PAGOS
+   add constraint FK_PAGOS_REFERENCE_VENTAS foreign key (ID_VENTA)
+      references VENTAS (ID_VENTA)
+go
+
+
+
+alter table STOCK
+   add constraint FK_STOCK_REFERENCE_PRODUCTO foreign key (ID_PRODUCTO)
+      references PRODUCTO (ID_PRODUCTO)
+go
+
+
+alter table VENTAS
+   add constraint FK_VENTAS_REFERENCE_ENCARGAD foreign key (ID_ENCARGADOS)
+      references ENCARGADOS (ID_ENCARGADOS)
+go
+
+alter table VENTAS
+   add constraint FK_VENTAS_REFERENCE_FACTURAS foreign key (ID_FACTURAS)
+      references FACTURAS (ID_FACTURAS)
+go
+
+alter table VENTAS
+   add constraint FK_VENTAS_REFERENCE_CLIENTE foreign key (ID_CLIENTE)
+      references CLIENTE (ID_CLIENTE)
+go
+
+
+
+alter table DETALLES_FACTURA
+   add constraint FK_DETALLES_REFERENCE_FACTURAS foreign key (ID_FACTURAS)
+      references FACTURAS (ID_FACTURAS)
+go
+
+alter table DETALLES_FACTURA
+   add constraint FK_DETALLES_REFERENCE_VENTAS foreign key (ID_VENTA)
+      references VENTAS (ID_VENTA)
+go
+
+
+alter table FACTURAS
+   add constraint FK_FACTURAS_REFERENCE_VENTAS foreign key (ID_VENTA)
+      references VENTAS (ID_VENTA)
+go
+
+alter table FACTURAS
+   add constraint FK_FACTURAS_REFERENCE_DETALLE_ foreign key (ID_DETALLE_CREDITO)
+      references DETALLE_CREDITO (ID_DETALLE_CREDITO)
+go
+
+alter table FACTURAS
+   add constraint FK_FACTURAS_REFERENCE_CLIENTE foreign key (ID_CLIENTE)
+      references CLIENTE (ID_CLIENTE)
+go
+
+alter table FACTURAS
+   add constraint FK_FACTURAS_REFERENCE_ENCARGAD foreign key (ID_ENCARGADOS)
+      references ENCARGADOS (ID_ENCARGADOS)
+go
+
+alter table FACTURAS
+   add constraint FK_FACTURAS_REFERENCE_CLIENTES foreign key (ID_CLIENTE)
+      references CLIENTE (ID_CLIENTE)
+go
+
+
+
+alter table DETALLES_DE_PAGO
+   add constraint FK_DETALLES_REFERENCE_PAGOS foreign key (ID_PAGO)
+      references PAGOS (ID_PAGO)
+go
+
+alter table DETALLES_DE_PAGO
+   add constraint FK_DETALLES_REFERENCE_FORMAS_D foreign key (ID_FORMAS_PAGO)
+      references FORMAS_DE_PAGO (ID_FORMAS_PAGO)
+go
+
+alter table DETALLES_DE_PAGO
+   add constraint FK_DETALLES_REFERENCE_TARJETA foreign key (ID_TARJETA)
+      references TARJETA (ID_TARJETA)
+go
+
+alter table DETALLES_DE_PAGO
+   add constraint FK_DETALLES_REFERENCE_BANCOS foreign key (ID_BANCO)
+      references BANCOS (ID_BANCO)
+go
+
+alter table NOTAS_DE_CREDITO
+   add constraint FK_NOTAS_DE_REFERENCE_FACTURAS foreign key (ID_FACTURAS)
+      references FACTURAS (ID_FACTURAS)
+go
+
+alter table NOTAS_DE_CREDITO
+   add constraint FK_NOTAS_DE_REFERENCE_ENCARGAD foreign key (ID_ENCARGADOS)
+      references ENCARGADOS (ID_ENCARGADOS)
+go
+
+
+
+
+
+
