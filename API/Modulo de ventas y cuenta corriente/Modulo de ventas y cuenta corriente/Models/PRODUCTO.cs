@@ -23,7 +23,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public string DESCRIPCION { get; set; }
 
-        public int PRECIO { get; set; }
+        public decimal PRECIO { get; set; }
 
         ICollection<STOCK> _STOCK { get; set; }
         ICollection<VENTAS_DETALLES> _VENTAS_DETALLES{ get; set; }

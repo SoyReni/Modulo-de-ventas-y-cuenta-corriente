@@ -20,12 +20,12 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public int CANTIDAD { get; set; }
 
-        public int PRECIO_UNITARIO { get; set; }
+        public decimal PRECIO_UNITARIO { get; set; }
 
-        public int SUBTOTAL { get; set; }
+        public decimal SUBTOTAL { get; set; }
 
-        public int MONTO { get; set; }
+        public decimal MONTO { get; set; }
 
-        public int IVA { get; set; }
+        public decimal IVA { get; set; }
     }
 }

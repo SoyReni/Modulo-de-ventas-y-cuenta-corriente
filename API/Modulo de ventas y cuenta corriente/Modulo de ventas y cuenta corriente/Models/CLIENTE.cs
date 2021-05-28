@@ -25,7 +25,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public string CORREO { get; set; }
 
-        public int CREDITO { get; set; }
+        public decimal CREDITO { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
 
         ICollection<PAGOS> _PAGOS { get; set; }

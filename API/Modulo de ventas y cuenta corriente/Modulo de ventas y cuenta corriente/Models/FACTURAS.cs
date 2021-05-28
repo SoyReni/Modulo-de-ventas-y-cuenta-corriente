@@ -32,11 +32,11 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public string ESTADO { get; set; }
 
-        public int TOTAL_ { get; set; }
+        public decimal TOTAL_ { get; set; }
 
-        public int IVA { get; set; }
+        public decimal IVA { get; set; }
 
-        public int SALDO { get; set; }
+        public decimal SALDO { get; set; }
 
         public DateTime fecha { get; set; }
 

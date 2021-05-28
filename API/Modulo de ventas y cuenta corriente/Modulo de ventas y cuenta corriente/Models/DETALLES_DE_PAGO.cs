@@ -24,9 +24,9 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [ForeignKey("ID_BANCO")]
         public int ID_BANCO { get; set; }
 
-        public int MONTO { get; set; }
+        public decimal MONTO { get; set; }
 
-        public int VUELTO { get; set; }
+        public decimal VUELTO { get; set; }
 
         public string NUMERO { get; set; }
 

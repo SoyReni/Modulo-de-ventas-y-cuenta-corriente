@@ -33,9 +33,9 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public string ESTADO { get; set; }
 
-        public int TOTAL { get; set; }
+        public decimal TOTAL { get; set; }
 
-        public int IVA { get; set; }
+        public decimal IVA { get; set; }
 
         ICollection<DETALLES_FACTURA> _DETALLES_FACTURA { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }

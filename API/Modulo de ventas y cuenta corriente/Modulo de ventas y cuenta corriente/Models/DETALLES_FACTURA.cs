@@ -18,7 +18,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [ForeignKey("ID_FACTURAS")]
         public int ID_FACTURAS { get; set; }
 
-        public int IVA { get; set; }
+        public decimal IVA { get; set; }
 
         public string ESTADO { get; set; }
 

@@ -16,7 +16,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [Key]
         public int ID_DETALLE_CREDITO { get; set; }
 
-        public int MONTO_CUOTA { get; set; }
+        public decimal MONTO_CUOTA { get; set; }
 
         public char PAGADO { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
