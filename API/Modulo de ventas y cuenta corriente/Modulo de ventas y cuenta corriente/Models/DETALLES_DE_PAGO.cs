@@ -28,7 +28,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public decimal VUELTO { get; set; }
 
-        public string NUMERO { get; set; }
+        public String NUMERO { get; set; }
 
     }
 }

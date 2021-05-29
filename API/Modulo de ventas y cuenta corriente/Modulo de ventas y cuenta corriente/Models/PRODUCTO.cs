@@ -17,11 +17,11 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [Key]
         public int ID_PRODUCTO { get; set; }
 
-        public string CODIGO { get; set; }
+        public String CODIGO { get; set; }
 
-        public string NOMBRE { get; set; }
+        public String NOMBRE { get; set; }
 
-        public string DESCRIPCION { get; set; }
+        public String DESCRIPCION { get; set; }
 
         public decimal PRECIO { get; set; }
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Pictures\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj": {}
+    "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Pictures\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj": {
+    "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Pictures\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
+        "projectUniqueName": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
         "projectName": "Modulo de ventas y cuenta corriente",
-        "projectPath": "C:\\Users\\Usuario\\Pictures\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Pictures\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\obj\\",
+        "projectPath": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente.csproj",
+        "packagesPath": "C:\\Users\\Reni\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reni\\Documents\\Modulo-de-ventas-y-cuenta-corriente\\API\\Modulo de ventas y cuenta corriente\\Modulo de ventas y cuenta corriente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Reni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -50,13 +52,17 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.CodeAnalysis.CSharp.Workspaces": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[3.1.15, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -91,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.115\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

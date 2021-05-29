@@ -17,17 +17,18 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [Key]
         public int ID_CLIENTE { get; set; }
 
-        public string RUC { get; set; }
+        public String RUC { get; set; }
 
-        public string NOMBRE { get; set; }
+        public String NOMBRE_ { get; set; }
 
-        public string APELLIDO { get; set; }
+        public String APELLIDO { get; set; }
 
-        public string CORREO { get; set; }
+        public String TELEFONO { get; set;  }
+
+        public String CORREO { get; set; }
 
         public decimal CREDITO { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
-
         ICollection<PAGOS> _PAGOS { get; set; }
         ICollection<VENTAS> _VENTAS { get; set; }
     }

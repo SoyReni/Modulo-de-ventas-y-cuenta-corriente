@@ -15,10 +15,8 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         [Key]
         public int ID_TARJETA { get; set; }
-
-        public string MARCA { get; set; }
-
-        public string TIPO { get; set; }
+        public String MARCA { get; set; }
+        public String TIPO { get; set; }
         ICollection <DETALLES_DE_PAGO> _DETALLES_DE_PAGO { get; set; }
     }
 }

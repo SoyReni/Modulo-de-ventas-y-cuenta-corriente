@@ -18,7 +18,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public decimal MONTO_CUOTA { get; set; }
 
-        public char PAGADO { get; set; }
+        public int PAGADO { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
 
     }

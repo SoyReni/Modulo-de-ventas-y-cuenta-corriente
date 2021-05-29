@@ -30,7 +30,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [ForeignKey("ID_DETALLE_CREDITO")]
         public int ID_DETALLE_CREDITO { get; set; }
 
-        public string ESTADO { get; set; }
+        public String ESTADO { get; set; }
 
         public decimal TOTAL_ { get; set; }
 

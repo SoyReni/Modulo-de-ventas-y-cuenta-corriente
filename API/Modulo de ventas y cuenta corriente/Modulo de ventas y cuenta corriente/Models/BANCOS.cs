@@ -16,7 +16,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [Key]
         public int ID_BANCO { get; set; }
 
-        public string NOMBRE { get; set; }
+        public String NOMBRE { get; set; }
 
         ICollection <DETALLES_DE_PAGO> _DETALLES_DE_PAGO { get; set; }
     }

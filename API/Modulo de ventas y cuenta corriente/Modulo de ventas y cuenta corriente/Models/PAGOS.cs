@@ -21,10 +21,8 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         [ForeignKey("ID_VENTA")]
         public int ID_VENTA { get; set; }
-
-        public DateTime FECHA { get; set; }
-
         public decimal TOTAL { get; set; }
+        public DateTime FECHA { get; set; }
 
         ICollection<DETALLES_DE_PAGO> _DETALLES_DE_PAGO { get; set; }
     }

@@ -10,7 +10,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
     public class DETALLES_FACTURA
     {
         [Key]
-        public int ID_DETALLES_FACTURA { get; set; }
+        public int ID_DETALLE_FACTURA { get; set; }
 
         [ForeignKey("ID_VENTA")]
         public int ID_VENTA { get; set; }
@@ -20,7 +20,7 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public decimal IVA { get; set; }
 
-        public string ESTADO { get; set; }
+        public String ESTADO { get; set; }
 
         public int CANT_CUOTAS { get; set; }
     }

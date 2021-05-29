@@ -20,9 +20,9 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
 
         public DateTime FECHA_EMICIO { get; set; }
 
-        public string CONCEPTO { get; set; }
+        public String CONCEPTO { get; set; }
 
-        public string RAZON { get; set; }
+        public String RAZON { get; set; }
 
         public decimal MONTO { get; set; }
 

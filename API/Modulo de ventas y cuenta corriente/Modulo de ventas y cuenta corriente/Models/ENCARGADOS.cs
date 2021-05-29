@@ -17,21 +17,21 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [Key]
         public int ID_ENCARGADOS { get; set; }
 
-        public string USUARIO { get; set; }
+        public String USUARIO { get; set; }
 
-        public string CONTRASENA { get; set; }
+        public String CONTRASENA { get; set; }
 
-        public string NOMBRE { get; set; }
+        public String NOMBRE { get; set; }
 
-        public string APELLIDO_ { get; set; }
+        public String APELLIDO_ { get; set; }
 
-        public int CI { get; set; }
+        public String CI { get; set; }
 
-        public string TELEFONO { get; set; }
+        public String TELEFONO { get; set; }
 
-        public string CORREO { get; set; }
+        public String CORREO { get; set; }
 
-        public string DIRECCION { get; set; }
+        public String DIRECCION { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
         ICollection<NOTAS_DE_CREDITO> _NOTAS_DE_CREDITO { get; set; }
         ICollection<VENTAS> _VENTAS { get; set; }

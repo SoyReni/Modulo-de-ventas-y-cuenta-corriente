@@ -23,9 +23,5 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         public decimal PRECIO_UNITARIO { get; set; }
 
         public decimal SUBTOTAL { get; set; }
-
-        public decimal MONTO { get; set; }
-
-        public decimal IVA { get; set; }
     }
 }

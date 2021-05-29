@@ -21,7 +21,8 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         public int ID_VENTA { get; set; }
 
         [ForeignKey("ID_ENCARGADO")]
-        public int ID_ENCARGADO { get; set; }
+        public int ID_ENCARGADOS { get; set; }
+        public DateTime FECHA { get; set; }
 
         [ForeignKey("ID_CLIENTE")]
         public int ID_CLIENTE { get; set; }
@@ -29,14 +30,11 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Models
         [ForeignKey("ID_FACTURAS")]
         public int ID_FACTURAS { get; set; }
 
-        public DateTime FECHA { get; set; }
-
-        public string ESTADO { get; set; }
+        public String ESTADO { get; set; }
 
         public decimal TOTAL { get; set; }
 
         public decimal IVA { get; set; }
-
         ICollection<DETALLES_FACTURA> _DETALLES_FACTURA { get; set; }
         ICollection<FACTURAS> _FACTURAS { get; set; }
         ICollection <PAGOS> _PAGOS { get; set; }
