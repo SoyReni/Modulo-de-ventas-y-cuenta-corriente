@@ -22,5 +22,21 @@ namespace Modulo_de_ventas_y_cuenta_corriente.Services
             return clientes; 
         }
 
+        public IEnumerable<STOCK> GetSTOCK()
+        {
+            var stock = _context.STOCK.ToList();
+            return stock; 
+        }
+
+        public STOCK GetSTOCKitem (int id)
+        {
+            return (STOCK)_context.STOCK.Where(t => t.ID_PRODUCTO == id); 
+        }
+
+        public STOCK GetSTOCKid (int id)
+        {
+            return (STOCK)_context.STOCK.Where(t => t.ID_stock == id);
+        }
+
     }
 }
