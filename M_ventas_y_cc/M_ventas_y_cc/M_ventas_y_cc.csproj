@@ -181,10 +181,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DEPOSITOesController.cs" />
     <Compile Include="Controllers\ENCARGADOesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SESIONsController.cs" />
+    <Compile Include="Controllers\STOCKsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,11 +226,24 @@
     <Compile Include="Migrations\202106051842144_AddedSESIONModel.Designer.cs">
       <DependentUpon>202106051842144_AddedSESIONModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106080317575_AddedDEPOSITOModels.cs" />
+    <Compile Include="Migrations\202106080317575_AddedDEPOSITOModels.Designer.cs">
+      <DependentUpon>202106080317575_AddedDEPOSITOModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106080328459_AddedSTYDEPModels.cs" />
+    <Compile Include="Migrations\202106080328459_AddedSTYDEPModels.Designer.cs">
+      <DependentUpon>202106080328459_AddedSTYDEPModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106080337503_AddedFila.cs" />
+    <Compile Include="Migrations\202106080337503_AddedFila.Designer.cs">
+      <DependentUpon>202106080337503_AddedFila.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\BANCO.cs" />
     <Compile Include="Models\CLIENTE.cs" />
+    <Compile Include="Models\DEPOSITO.cs" />
     <Compile Include="Models\DETALLE_CREDITO.cs" />
     <Compile Include="Models\ENCARGADO.cs" />
     <Compile Include="Models\FORMAS_DE_PAGO.cs" />
@@ -236,6 +251,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PRODUCTO.cs" />
     <Compile Include="Models\SESION.cs" />
+    <Compile Include="Models\STOCK.cs" />
     <Compile Include="Models\TARJETA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -306,6 +322,16 @@
     <Content Include="Views\SESIONs\Details.cshtml" />
     <Content Include="Views\SESIONs\Edit.cshtml" />
     <Content Include="Views\SESIONs\Index.cshtml" />
+    <Content Include="Views\STOCKs\Create.cshtml" />
+    <Content Include="Views\STOCKs\Delete.cshtml" />
+    <Content Include="Views\STOCKs\Details.cshtml" />
+    <Content Include="Views\STOCKs\Edit.cshtml" />
+    <Content Include="Views\STOCKs\Index.cshtml" />
+    <Content Include="Views\DEPOSITOes\Create.cshtml" />
+    <Content Include="Views\DEPOSITOes\Delete.cshtml" />
+    <Content Include="Views\DEPOSITOes\Details.cshtml" />
+    <Content Include="Views\DEPOSITOes\Edit.cshtml" />
+    <Content Include="Views\DEPOSITOes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +376,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106051842144_AddedSESIONModel.resx">
       <DependentUpon>202106051842144_AddedSESIONModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106080317575_AddedDEPOSITOModels.resx">
+      <DependentUpon>202106080317575_AddedDEPOSITOModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106080328459_AddedSTYDEPModels.resx">
+      <DependentUpon>202106080328459_AddedSTYDEPModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106080337503_AddedFila.resx">
+      <DependentUpon>202106080337503_AddedFila.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

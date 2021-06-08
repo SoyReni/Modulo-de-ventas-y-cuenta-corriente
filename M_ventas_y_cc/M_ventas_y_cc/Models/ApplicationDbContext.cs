@@ -32,6 +32,8 @@ namespace M_ventas_y_cc.Models
         public DbSet<FORMAS_DE_PAGO> FORMAS_DE_PAGO { get; set; }
         public DbSet<SESION> SESION { get; set; }
 
+        public DbSet<DEPOSITO> DEPOSITO { get; set; }
+        public DbSet<STOCK> STOCK { get; set; }
 
 
 
