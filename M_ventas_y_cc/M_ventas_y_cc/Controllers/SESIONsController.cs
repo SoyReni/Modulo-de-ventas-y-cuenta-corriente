@@ -46,7 +46,7 @@ namespace M_ventas_y_cc.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SESIONId,ENCARGADOSId,usuario,contraseña")] SESION sESION)
+        public ActionResult Create([Bind(Include = "SESIONId,usuario,contraseña")] SESION sESION)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace M_ventas_y_cc.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SESIONId,ENCARGADOSId,usuario,contraseña")] SESION sESION)
+        public ActionResult Edit([Bind(Include = "SESIONId,usuario,contraseña")] SESION sESION)
         {
             if (ModelState.IsValid)
             {

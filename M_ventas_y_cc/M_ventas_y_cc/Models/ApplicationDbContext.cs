@@ -22,6 +22,8 @@ namespace M_ventas_y_cc.Models
 
 
         public DbSet<ENCARGADO> ENCARGADOS { get; set; }
+
+       
         public DbSet<BANCO> BANCO { get; set; }
 
         public DbSet<DETALLE_CREDITO> DETALLE_CREDITOS { get; set; }
@@ -30,11 +32,11 @@ namespace M_ventas_y_cc.Models
         public DbSet<TARJETA> TARJETA { get; set; }
         public DbSet<CLIENTE> CLIENTE { get; set; }
         public DbSet<FORMAS_DE_PAGO> FORMAS_DE_PAGO { get; set; }
-        public DbSet<SESION> SESION { get; set; }
+        public DbSet<SESIONES> SESIONES { get; set; }
 
         public DbSet<DEPOSITO> DEPOSITO { get; set; }
         public DbSet<STOCK> STOCK { get; set; }
-
+        public DbSet<SESION> SESION { get; set; }
 
 
     }
