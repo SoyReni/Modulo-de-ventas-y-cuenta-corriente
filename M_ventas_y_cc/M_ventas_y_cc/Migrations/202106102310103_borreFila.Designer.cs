@@ -7,13 +7,13 @@ namespace M_ventas_y_cc.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedSESIONModel : IMigrationMetadata
+    public sealed partial class borreFila : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedSESIONModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(borreFila));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106051842144_AddedSESIONModel"; }
+            get { return "202106102310103_borreFila"; }
         }
         
         string IMigrationMetadata.Source

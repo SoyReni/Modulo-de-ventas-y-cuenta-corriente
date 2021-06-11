@@ -10,7 +10,7 @@ namespace M_ventas_y_cc.Models
 
         public int SESIONId { get; set; }
 
-        public int ENCARGADOSId { get; set; }
+     
 
         public String usuario { get; set; }
         public String contraseña { get; set; }
