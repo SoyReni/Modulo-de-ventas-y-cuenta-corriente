@@ -295,10 +295,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\APICLIENTEController.cs" />
     <Compile Include="Controllers\APIDEPOSITOesController.cs" />
     <Compile Include="Controllers\APIENCARGADOesController.cs" />
     <Compile Include="Controllers\APISESIONESController.cs" />
     <Compile Include="Controllers\APISESIONsController.cs" />
+    <Compile Include="Controllers\APISTOCKController.cs" />
+    <Compile Include="Controllers\CLIENTEsController.cs" />
     <Compile Include="Controllers\DEPOSITOesController.cs" />
     <Compile Include="Controllers\ENCARGADOesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -465,6 +468,11 @@
     <Content Include="Views\SESIONES\Details.cshtml" />
     <Content Include="Views\SESIONES\Edit.cshtml" />
     <Content Include="Views\SESIONES\Index.cshtml" />
+    <Content Include="Views\CLIENTEs\Create.cshtml" />
+    <Content Include="Views\CLIENTEs\Delete.cshtml" />
+    <Content Include="Views\CLIENTEs\Details.cshtml" />
+    <Content Include="Views\CLIENTEs\Edit.cshtml" />
+    <Content Include="Views\CLIENTEs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
